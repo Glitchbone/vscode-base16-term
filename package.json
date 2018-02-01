@@ -1,0 +1,15 @@
+{
+  "name": "vscode-base16-term",
+  "version": "1.0.0",
+  "description": "Base16 Shell color schemes for Visual Studio Code terminal",
+  "main": "index.js",
+  "scripts": {
+    "build": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrien Glitchbone",
+  "license": "MIT",
+  "devDependencies": {
+    "glob": "^7.1.2"
+  }
+}
