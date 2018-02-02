@@ -22,8 +22,13 @@ const Swatch = (props) => {
     ];
 
     return (
-        <div className="swatch clearfix">
-            {swatchColors.map((key) => <div className="color" key={key} style={{backgroundColor: props[`terminal.${key}`]}}>&nbsp;</div>)}
+        <div className="swatch padded">
+            {swatchColors.map((key, i) => 
+                <div className="swatch__color" key={key} style={{
+                    backgroundColor: props[`terminal.${key}`],
+                    borderColor: i === 0 ? props['terminal.foreground'] : props[`terminal.${key}`]
+                }}></div>
+            )}
         </div>
     )
 }

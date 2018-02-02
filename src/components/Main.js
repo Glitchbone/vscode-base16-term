@@ -12,8 +12,11 @@ class Main extends Component {
     }
 
     setActiveTheme(id) {
+
+        const theme = _.find(this.props.themes, {id});
+
         this.setState({
-            activeTheme: id ? _.find(this.props.themes, {id}) : this.props.themes[0]
+            activeTheme: theme ? theme : this.props.themes[0]
         });
     }
 
@@ -27,9 +30,7 @@ class Main extends Component {
 
     render() {
         return (
-            <main>
-                <Theme {...this.state.activeTheme} />
-            </main>
+            <Theme {...this.state.activeTheme} />
         )
     }
 }

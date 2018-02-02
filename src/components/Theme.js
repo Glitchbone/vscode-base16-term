@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Terminal from './Terminal';
 import Swatch from './Swatch';
-import CodeSnippet from './CodeSnippet';
+import Tools from './Tools';
 
-class Theme extends Component {
+const Theme = (props) => {
 
-    render() {
-
-        return (
-            <div className="theme" style={{backgroundColor: this.props.colors['terminal.background']}}>
-                <h2 style={{color: this.props.colors['terminal.foreground']}}>{this.props.name}</h2>
-                <Terminal {...this.props.colors} />
-                <Swatch {...this.props.colors} />
-                <CodeSnippet {...this.props.colors} />
+    return (
+        <main className="theme" style={{backgroundColor: props.colors['terminal.background']}}>
+            <div>
+                <h2 style={{color: props.colors['terminal.foreground']}}>{props.name}</h2>
+                <Swatch {...props.colors} />
+                <Terminal {...props.colors} />
+                <Tools {...props.colors} />
             </div>
-        );
-        
-    }
+        </main>
+    )
 }
 
 export default Theme;

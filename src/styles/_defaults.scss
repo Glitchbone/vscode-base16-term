@@ -1,0 +1,41 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    color: $default-text-color;
+}
+
+body,
+button {
+    font-family: $base-font-family;
+}
+
+button {
+    background: transparent;
+    color: #fff;
+    padding: 12px 24px;
+    border: 0;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        
+    }
+    &:active {
+        transform: scale(.98);
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 300;
+}
