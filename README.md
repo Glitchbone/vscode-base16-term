@@ -1,10 +1,6 @@
-# Base16 color schemes for Visual Studio Code Terminal
+# Base16 Terminal Colors for Visual Studio Code
 
-## Usage
-
-Copy the color scheme you need from [themes.json](themes.json) to your VS Code settings under the `workbench.colorCustomizations` property.
-
-See the [Visual Studio Code Docs](https://code.visualstudio.com/docs/getstarted/theme-color-reference#_integrated-terminal-colors) for more informations.
+[glitchbone.github.io/vscode-base16-term](https://glitchbone.github.io/vscode-base16-term)
 
 ## Building the themes
 

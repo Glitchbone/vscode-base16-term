@@ -1,7 +1,7 @@
 {
   "name": "vscode-base16-term",
   "version": "1.0.0",
-  "description": "Base16 Shell color schemes for Visual Studio Code terminal",
+  "description": "Base16 Terminal Colors for Visual Studio Code",
   "author": "Adrien Glitchbone",
   "license": "MIT",
   "private": true,
