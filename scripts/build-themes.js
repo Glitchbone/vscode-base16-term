@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const execSync = require('child_process').execSync;
 const glob = require('glob');
 const path = require('path');
@@ -18,7 +16,7 @@ const kebabToTitleCase = str => {
 }
 
 var themes = [];
-const outFileName = 'themes.json';
+const outFileName = 'src/data/themes.json';
 
 glob.sync(`${themesDir}/*.sh`).forEach((file) => {
 
@@ -26,7 +24,7 @@ glob.sync(`${themesDir}/*.sh`).forEach((file) => {
 
     const id = path.basename(file).split('.')[0].replace('base16-', '');
     const name = kebabToTitleCase(id);
-    const colors = execSync(`./parse-theme-colors ${file}`);
+    const colors = execSync(`./scripts/parse-theme-colors ${file}`);
     const theme = JSON.parse(colors);
 
     themes.push({
